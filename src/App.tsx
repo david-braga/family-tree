@@ -145,7 +145,24 @@ const family: Family[] = [
     parents: [1231239887112, 2351232112252],
   },
 ];
+//find each member's name
+const memberObj = family.map(el => {
+  for (let i = 0; i < family.length; i++) {
+    return el
 
+  }
+  return el
+})
+console.log(memberObj)
+
+// const findParents = family.map(person => {
+//   let member = person.name
+//   return member
+// })
+// console.log(findParents)
+// // const findChildren = findParent.map(
+
+// // )
 
 function App() {
 
@@ -161,20 +178,23 @@ function App() {
   //   return test
   // })
 
-
+  const liStyle = {
+    backgroundColor: 'pink',
+  };
 
   return (
     <div className="App">
       <h1>Family Tree</h1>
       <div>
-        <ul>
+        <div>
           {family.map(member => {
-            return <li>
-              {member.name}
-            </li>
+            if (member.gender !== 'male') {
+              return <div id='names' style={liStyle}>{member.name}</div>
+            } else
+              return <div id='names'>{member.name}</div>
           })}
 
-        </ul>
+        </div>
       </div>
     </div>
   );
