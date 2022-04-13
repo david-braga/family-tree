@@ -23,7 +23,7 @@ const App = (props: Family) => {
         nodeRadius={15}
         margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
         height={700}
-        width={1000} >{props.name}</Tree>
+        width={1000} >[{props.name}]</Tree>
     </div >
   );
 }
